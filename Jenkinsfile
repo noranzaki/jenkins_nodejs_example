@@ -23,11 +23,11 @@ pipeline {
                 script {
                     withCredentials([
                         string(credentialsId: 'rds_hostname', variable: 'RDS_HOSTNAME'),
-                        string(credentialsId: 'rds-username', variable: 'RDS_USERNAME'),
-                        string(credentialsId: 'rds-password', variable: 'RDS_PASSWORD'),
-                        string(credentialsId: 'rds-port', variable: 'RDS_PORT'),
-                        string(credentialsId: 'redis-hostname', variable: 'REDIS_HOSTNAME'),
-                        string(credentialsId: 'redis-port', variable: 'REDIS_PORT')
+                        string(credentialsId: 'rds_username', variable: 'RDS_USERNAME'),
+                        string(credentialsId: 'rds_password', variable: 'RDS_PASSWORD'),
+                        string(credentialsId: 'rds_port', variable: 'RDS_PORT'),
+                        string(credentialsId: 'redis_hostname', variable: 'REDIS_HOSTNAME'),
+                        string(credentialsId: 'redis_port', variable: 'REDIS_PORT')
                     ]) {
                         sh '''
                         docker run --rm -d -p 3000:3000 \
